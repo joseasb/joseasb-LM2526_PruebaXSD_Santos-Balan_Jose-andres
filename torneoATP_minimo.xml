@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<torneoATP xmlns="http://torneos.com/torneos"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="http://torneos.com/torneosATP torneosATP.xsd">
+			
+	<torneo>
+		<nombre>Torneo minimo</nombre>
+		<fechaInicio>2026-02-12</fechaInicio>
+		<fechaFin>2026-02-25</fechaFin>
+		
+		<puntosATP>
+			<ronda puntos="45">ganador
+			</ronda>
+			<ronda puntos="30">semis
+			</ronda>
+			<ronda puntos="23">finalista
+			</ronda>
+		</puntosATP>
+		<caudro>
+			<cruce numero="7?">
+				<jugador nombre="antonio ROdriguez" rankingTorneo="5"/>
+				<jugador nombre="hugo carrasco" rankingTorneo="4"/>
+			</cruce>
+		<partidos>
+			<partido esatdo="en juego">
+				<tipo> individual femenino</tipo>
+				<jugadores>
+					
+					
+				
+				
