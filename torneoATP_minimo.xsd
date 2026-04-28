@@ -5,4 +5,155 @@
            elementFormDefault="qualified"> 
 		   
 		   
+		<xs:simpleType name="estadoPartido">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="en juego"/>
+				<xs:enumeration value="finalizado"/>
+			</xs:restriction>
+		</xs:simpleType>
 		
+		<xs:simpleType name="validarRonda">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value=" 2da ronda"/>
+				<xs:enumeration value="3ra rondao"/>
+				<xs:enumeration value="cuartos"/>
+				<xs:enumeration value="semis"/>
+				<xs:enumeration value="finalistas"/>
+				<xs:enumeration value="ganador"/>
+
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:simpleType name="tipoPartido">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value=" individual masculino"/>
+				<xs:enumeration value="individual femenino"/>
+				<xs:enumeration value="dobles masculinos"/>
+				<xs:enumeration value="dobles femeninos"/>
+				<xs:enumeration value="dobles mixtos"/>
+			</xs:restriction>
+		</xs:simpleType>
+		
+		
+		<xs:element name="torneoATP">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="torneo">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="nombre" type="xs:string"/>
+								<xs:element name="fechaInicio" type="xs:date"/>
+								<xs:element name="fechaFin" type="xs:date"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="puntosATP">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="ronda" type="validarRonda"/>
+								<xs:simpleType>
+								<xs:attribute name="puntos" type="xs:integer" use="required"/>
+								</simpleType>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="cuadro">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="cruce">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="jugador">
+												<xs:simpleType>
+													<xs:sequence>
+														<xs:attribute name="nombre" type="xs:string" use="required"/>
+														<attribute name="rankingTorneo" type="xs:integer" use="required"/>
+													</xs:sequence>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									<xs:complexType>
+								</xs:element>
+								<xs:element name="partidos">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="partido">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="tipo" type="xs:string"/>
+														<xs:element name="jugadores">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="lado1">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="jugador">
+																					<xs:simpleType>
+																						<xs:attribute name="nombre" type="xs:string" use="required"/>
+																						<xs:attribute name="rankingTorneo" type="xs:string" use="required"/>
+																					</xs:simpleType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																	<xs:element name="lado2">
+																		<xs:complexType>
+																			<xs:sequence>
+																				<xs:element name="jugador">
+																					<xs:simpleType>
+																						<xs:attribute name="nombre" type="xs:string" use="required"/>
+																						<xs:attribute name="rankingTorneo" type="xs:string" use="required"/>
+																					</xs:simpleType>
+																				</xs:element>
+																			</xs:sequence>
+																		</xs:complexType>
+																	</xs:element>
+																</xs:sequence>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="resultado">
+															<xs:complexType>
+																<xs:sequence>
+																	<xs:element name="set">
+																		<xs:simpleType>
+																			<xs:attribute name="numero" type="integer" use="required"/>
+																		</xs:simpleType>
+																		<xs:element name="juegos">
+																			<xs:simpleType>
+																				<xs:attribute name="lado1" type="xs:string" use="required"/>
+																				<xs:attribute name="lado2" type="xs:string" use="required"/>
+																			</xs:simpleType>
+																		</xs:element>
+																	<xs:element>
+																</xs:sequence>
+															</complexType>
+														</xs:element>
+													</xs:sequence>
+													<attribute name="estado" type="estadoPartido" use="required"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		<xs:element>
+	</xs:schema>		
+																			
+																				
+																				
+																				
+																				
+																				
+																				
+																				
+																				
+																				
+																				
+																				
+															
+																	
+															

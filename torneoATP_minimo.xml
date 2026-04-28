@@ -14,13 +14,13 @@
 			<ronda puntos="23">finalista</ronda>
 		</puntosATP>
 		<caudro>
-			<cruce numero="7?">
+			<cruce>
 				<jugador nombre="antonio ROdriguez" rankingTorneo="5"/>
 				<jugador nombre="hugo carrasco" rankingTorneo="4"/>
 			</cruce>
 		</caudro>
 		<partidos>
-			<partido esatdo="en juego">
+			<partido estado="en juego">
 				<tipo>individual femenino</tipo>
 				<jugadores>
 					<lado1>
@@ -32,7 +32,7 @@
 				</jugadores>
 				<resultado>
 					<set numero="5">
-						<juegos lado1="4"/>
+						<juegos lado1="4" lado2="6"/>
 					</set>
 				</resultado>
 			</partido>
