@@ -80,7 +80,7 @@
 											<xs:element name="partido">
 												<xs:complexType>
 													<xs:sequence>
-														<xs:element name="tipo" type="xs:string"/>
+														<xs:element name="tipo" type="tipoPartido"/>
 														<xs:element name="jugadores">
 															<xs:complexType>
 																<xs:sequence>
