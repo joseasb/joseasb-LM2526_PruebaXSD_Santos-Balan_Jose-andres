@@ -9,23 +9,34 @@
 		<fechaFin>2026-02-25</fechaFin>
 		
 		<puntosATP>
-			<ronda puntos="45">ganador
-			</ronda>
-			<ronda puntos="30">semis
-			</ronda>
-			<ronda puntos="23">finalista
-			</ronda>
+			<ronda puntos="45">ganador</ronda>
+			<ronda puntos="30">semis</ronda>
+			<ronda puntos="23">finalista</ronda>
 		</puntosATP>
 		<caudro>
 			<cruce numero="7?">
 				<jugador nombre="antonio ROdriguez" rankingTorneo="5"/>
 				<jugador nombre="hugo carrasco" rankingTorneo="4"/>
 			</cruce>
+		</caudro>
 		<partidos>
 			<partido esatdo="en juego">
-				<tipo> individual femenino</tipo>
+				<tipo>individual femenino</tipo>
 				<jugadores>
-					
-					
-				
-				
+					<lado1>
+						<jugador nombre="maria" rankingTorneo="4"/>
+					</lado1>
+					<lado2>
+						<jugador nombre="sonia" rankingTorneo="4"/>
+					</lado2>
+				</jugadores>
+				<resultado>
+					<set numero="5">
+						<juegos lado1="4"/>
+					</set>
+				</resultado>
+			</partido>
+		</partidos>
+	</torneo>
+</torneoATP>			
+			
