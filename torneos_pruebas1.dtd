@@ -1,9 +1,9 @@
-<ELEMENT torneoATP (torneo+)>
+<!ELEMENT torneoATP (torneo+)>
 <!ELEMENT torneo (nombre, fechaIni, fechaFin, puntosATP, cuadro, partidos)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT fechaIni (#PCDATA)>
 <!ELEMENT fechaFin (#PCDATA)>
-<!ELEMENT puntosATP (ronda, ronda, ronda | ronda?, | ronda? | ronda?)>
+<!ELEMENT puntosATP (ronda, ronda, ronda | ronda? | ronda? | ronda?)>
 <!ATTLIST ronda 
 	puntos CDATA #REQUIRED>
 <!ELEMENT ronda puntos(#PCDATA)>
@@ -20,17 +20,17 @@
 	estado (en juego | finalizado)>
 <!ELEMENT tipo (individual | individual femenino | dobles masculino | dobles femenino | dobles mixtos)>
 <!ELEMENT jugadores (lado1, lado2)>
-<!ELEMENT lado1 (jugador+)>
-<!ATTLIST jugador 
-	nombre CDATA #REQUIRED
-	rankingTorneo CDATA #REQUIRED>
+<!ELEMENT lado1 (jugador)>
+<!ELEMENT lado2 (jugador)>
 <!ELEMENT resultado (set+)>
 <!ELEMENT set (juegos)>
+<!ATTLIST set 
+	numero CDATA #REQUIRED>
 <!ELEMENT juegos (puntosJuego?)>
-<!ATTLIST juegos	
+<!ATTLIST juegos
 	lado1 CDATA #REQUIRED
 	lado2 CDATA #REQUIRED>
+<!ELEMENT puntosJuego EMPTY>
 <!ATTLIST puntosJuego
-	lado1 CDATA #REQUIRED
-	lado2 CDATA #REQUIRED>
-
+	lado1 (0 | 15 | 30 | 40 | AD)
+	lado2 (0 | 15 | 30 | 40 | AD)>
